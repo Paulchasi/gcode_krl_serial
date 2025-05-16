@@ -1,0 +1,23 @@
+1) Usar el detector de bordes "1_Obtener_Bordes.py" 
+y obtener una imagen en blanco y negro con solo los bordes, 
+de preferencia usar por ejemplo bigjpg.com para mejorar la calidad de los bordes antes del siguiente paso.
+
+2) ir a inkscape y convertir imagen a vector.
+Eso es abriendo nuestro archivo en inkscape
+Luego en la barra superior ir a Path > Trace Bitmap
+se abre las caracteristicas del Trace bitmap y cambia
+en modo de deteccion o " Detection mode" a centerline tracing  y le da a aplicar ,
+en las capas borra la imagen original y solo se queda con el vector creado ,
+va a exportar y se asegura que se exporte como .svg
+
+
+2) Va a https://sameer.github.io/svg2gcode/
+
+sube el .svg y obtener el .gcode
+
+3) usar el "2_Subir_Bajar_Z.py" para arreglar el gcode con subidas de Z para cada linea y la escala que querramos.
+
+4) nos genera un modificado.gcode y lo convertimos en el traductor a krl , osea .dat y .src
+
+5) si el archivo es muy grande mas de 1MB sumando dat y src usaremos la comunicacion serial, si no pues simplemente 
+con una usb pasamos el archivo al kuka. 
